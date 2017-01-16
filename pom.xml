@@ -1,21 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.dev4dan</groupId>
 	<artifactId>Demo4MyBatis</artifactId>
-	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<mybatis.version>3.2.7</mybatis.version>
-	</properties>
 	<name>Demo4MyBatis</name>
+	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>
+
+	<properties>
+		<!-- 主要依赖库的版本定义 -->
+		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+			<jdk-version>1.7</jdk-version> <spring-batch.version>2.2.7.RELEASE</spring-batch.version> 
+			<mybatis-pagehelper.version>3.7.0</mybatis-pagehelper.version> <slf4j.version>1.6.1</slf4j.version> 
+			<jdbc.driver.version>5.1.20</jdbc.driver.version> <cglib-nodep.version>2.2.2</cglib-nodep.version> 
+			<commons-dbcp.version>1.4</commons-dbcp.version> <commons-logging.version>1.1</commons-logging.version> 
+			<aspectjrt.version>1.6.11</aspectjrt.version> <servlet-api.version>2.5</servlet-api.version> 
+			<jstl.version>1.2</jstl.version> <aspectj.version>1.5.4</aspectj.version> 
+			<gson.version>2.2.4</gson.version> <jedis.version>2.1.0</jedis.version> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+			<commons-lang.version>3.3.2</commons-lang.version> <commons.collections.version>3.2.1</commons.collections.version> 
+			<spring.security.version>4.0.2.RELEASE</spring.security.version> <shiro.version>1.2.2</shiro.version> 
+			<httpclient.version>4.5.1</httpclient.version> <httpmime.version>4.5.1</httpmime.version> 
+			<deploy.env>dev</deploy.env> <logback.version>1.1.7</logback.version> -->
+		<junit.version>4.9</junit.version>
+		<mybatis.version>5.1.29</mybatis.version>
+		<mybatis-spring.context>1.2.2</mybatis-spring.context>
+		<log4j.version>1.7.2</log4j.version>
+		<spring.context>4.3.1.RELEASE</spring.context>
+		<spring.core>4.3.1.RELEASE</spring.core>
+		<spring.beans>4.3.1.RELEASE</spring.beans>
+		<common-beanutils.version>1.9.3</common-beanutils.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}}</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- mybatis核心包 -->
@@ -28,26 +50,42 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
-			<version>1.2.2</version>
+			<version>${mybatis-spring.context}</version>
 		</dependency>
 		<!-- mysql驱动包 -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.29</version>
+			<version>${mybatis.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.2</version>
+			<version>${log4j.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.3.1.RELEASE</version>
+			<version>${spring.context}</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${common-beanutils.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.core}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.beans}</version>
+		</dependency>
+
 
 	</dependencies>
 	<build>
@@ -62,7 +100,6 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
