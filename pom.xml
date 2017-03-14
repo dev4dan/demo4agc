@@ -6,7 +6,7 @@
 	<artifactId>Demo4MyBatis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo4acg</name>
-	<packaging>pom</packaging>
+	<packaging>war</packaging>
 
 	<properties>
 		<!-- 主要依赖库的版本定义 -->
